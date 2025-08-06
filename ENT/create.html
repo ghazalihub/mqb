@@ -1,0 +1,195 @@
+Ana,Bio,Phy,Phr,Mic,Pha,Fmt,Ent,Eye,Spm,Med,Sur,Ort,Ped,Obg,Psy,Der,Rad,Ane
+
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple QBank Account</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; max-width: 500px; margin: auto; }
+    .hidden { display: none; }
+    label, button { display: block; margin: .5rem 0; }
+    input, select, button { width: 100%; padding: .5rem; }
+	#otherInstitution { display: none; }
+	#yapis { display: none; }
+  </style>
+  <script src="s2m.js"></script>
+  <link rel="stylesheet" href="s2m.css">
+</head>
+<body>
+  <div id="form-container">
+    <h2>Create Account</h2>
+    <label>Name:<input type="text" id="name"></label>
+    <label>Roll No:<input type="text" id="roll"></label>
+    <label>Academic Year:
+	<select id="year">
+    <option value="1">1st Year</option>
+    <option value="2">2nd Year</option>
+    <option value="3">3rd Year</option>
+    <option value="4">4th Year</option>
+    <option value="5">Internship</option>
+	</select>
+	</label>
+	<label for="institution">Institution Name:</label>
+    <select id="institution" name="institution" required>
+        <option value="OMCH">OSMANIA MEDICAL COLLEGE, HYDERABAD</option>
+		<option value="__OTHER__">Other</option>
+        <option value="GAND">GANDHI MEDICAL COLLEGE, SECUNDERABAD</option>
+        <option value="KKTI">KAKATIYA MEDICAL COLLEGE, WARANGAL</option>
+        <option value="RADL">RAJIV INSTITUTE OF MEDICAL SCIENCE, ADILABAD</option>
+        <option value="GVNZ">GOVT MEDICAL COLLEGE, NIZAMABAD</option>
+        <option value="GMCM">GOVT MEDICAL COLLEGE, MAHABUBNAGAR</option>
+        <option value="ESIM">ESI MEDICAL COLLEGE, SANATHNAGAR, HYD</option>
+        <option value="SGMC">GOVT MEDICAL COLLEGE, SIDDIPET</option>
+        <option value="GMSR">GOVT MEDICAL COLLEGE, SURYAPET</option>
+        <option value="GMNL">GOVT MEDICAL COLLEGE, NALGONDA</option>
+        <option value="GMBK">GOVT MEDICAL COLLEGE, BHADRADRI KOTHAGUDEM</option>
+        <option value="GMHB">GOVT MEDICAL COLLEGE, MAHABUBABAD</option>
+        <option value="SIMS">SINGARENI INSTITUTE OF MEDICAL SCIENCES, RAMAGUNDAM</option>
+        <option value="GWNP">GOVT MEDICAL COLLEGE, WANAPARTHY</option>
+        <option value="GNGK">GOVT MEDICAL COLLEGE, NAGARKURNOOL</option>
+        <option value="GSGR">GOVT MEDICAL COLLEGE, SANGAREDDY</option>
+        <option value="GJTL">GOVT MEDICAL COLLEGE, JAGITYAL</option>
+        <option value="GMCL">GOVT MEDICAL COLLEGE, MANCHERIAL</option>
+        <option value="GJGN">GOVT MEDICAL COLLEGE, JANGAON</option>
+        <option value="GJBP">GOVT MEDICAL COLLEGE, JAYASHANKAR BHUPALPALLY</option>
+        <option value="GKMR">GOVT MEDICAL COLLEGE, KAMAREDDY</option>
+        <option value="GKRM">GOVT MEDICAL COLLEGE, KARIMNAGAR</option>
+        <option value="GKHM">GOVT MEDICAL COLLEGE, KHAMMAM</option>
+        <option value="GASF">GOVT MEDICAL COLLEGE, KUMURAM BHEEM ASIFABAD</option>
+        <option value="GNRM">GOVT MEDICAL COLLEGE, NIRMAL</option>
+        <option value="GSRC">GOVT MEDICAL COLLEGE, RAJANNA SIRCILLA</option>
+        <option value="GVKB">GOVT MEDICAL COLLEGE, VIKARABAD</option>
+        <option value="APLO">APOLLO INSTITUTE OF MEDICAL SCIENCES AND RESEARCH, HYD</option>
+        <option value="KMHD">KAMINENI ACADEMY OF MED SCI AND RESEARCH, HYD</option>
+        <option value="MAMS">MAMATA ACADEMY OF MED SCI, BACHUPALLY</option>
+        <option value="MMTA">MAMATA MEDICAL COLLEGE, KHAMMAM</option>
+        <option value="CARK">C ANANDA RAO IINSTITUTE OF MEDICAL SCIENCES, KARIMNAGAR</option>
+        <option value="PRTM">PRATHIMA INSTITUTE OF MEDICAL SCIENCES, KARIMNAGAR</option>
+        <option value="PRIW">PRATIMA RELIEF INSTITUTE OF MEDICAL SCIENCES, WARANGAL</option>
+        <option value="SVSM">S.V.S. MEDICAL COLLEGE, MAHABUBNAGAR</option>
+        <option value="MAHE">MAHESHWARA MEDICAL COLLEGE, PATANCHERU, MEDAK</option>
+        <option value="MNRS">MNR MEDICAL COLLEGE, SANGAREDDY</option>
+        <option value="RVMC">RVM MEDICAL COLLEGE, MULUGU</option>
+        <option value="SURB">SURABHI INSTITUTE OF MEDICAL SCIENCES, SIDDIPET</option>
+        <option value="TRRM">TRR INSTITUTE OF MEDICAL SCIENCES, INOLE, PATANCHERU</option>
+        <option value="KMNI">KAMINENI INSTITUTE OF MEDICAL SCIENCES., NARKETPALLY</option>
+        <option value="BASK">BHASKAR MEDICAL COLLEGE, MOINABAD, RR</option>
+        <option value="DPMR">DR PATNAM MAHENDER REDDY INST OF MED SCI, CHEVELLA</option>
+        <option value="MHVR">MAHAVIR INSTITUTE OF MEDICAL SCIENCES, VIKARABAD</option>
+        <option value="MLRD">MALLA REDDY INSTITUTE OF MEDICAL SCIENCE, SURARAM</option>
+        <option value="MRWN">MALLA REDDY MEDICAL COLLEGE FOR WOMEN,SURARAM</option>
+        <option value="MEDI">MEDICITY INSTITUTE OF MEDICAL SCIENCES</option>
+        <option value="CMRM">CMR INSTITUTE OF MEDICAL SCIENCES, KANDALKOYA, MEDCHAL</option>
+        <!--<option value="FCIM">FATHER COLOMBO INSTITUTE OF MEDICAL SCIENCES, WARANGAL</option>-->
+        <option value="AIMD">ARUNDATHI INSTITUTE OF MEDICAL SCIENCES, DUNDIGAL</option>
+        <option value="DCMS">DECCAN COLLEGE OF MEDICAL SCIENCES</option>
+        <option value="SHDN">SHADAN INSTITUTE OF MEDICAL SCIENCES</option>
+        <option value="AYAN">AYAAN INSTITUTE OF MEDICAL SCIENCES</option>
+        <option value="VRKW">DR V R K WOMENS MEDICAL COLLEGE</option>
+    </select>
+    <input type="text" id="otherInstitution" name="custom_institution" placeholder="Enter institution name">
+    <button id="create-btn">Submit</button>
+  </div>
+
+  <div id="status-container" class="hidden">
+    <p id="yapis">Your application is: <span id="status-text"></span></p>
+    <button id="check-btn">Check Status</button>
+  </div>
+
+  <script>
+    const API = 'https://script.google.com/macros/s/AKfycbzkRpfz69eToypfm7YAbeqFULFGOdnF0Ncak7vWbYfhgV1jjC6IxI3N4PbM4Se5EX04/exec';
+    const triedKey = 'accountCreationTried';
+    const userKey = 'qbUser';
+	const institutionSelect = document.getElementById('institution');
+    const otherInput = document.getElementById('otherInstitution');
+    institutionSelect.addEventListener('change', () => {
+      if (institutionSelect.value === '__OTHER__') {
+        otherInput.style.display = 'block'; otherInput.focus();
+      } else {
+        otherInput.style.display = 'none'; otherInput.value = '';
+      }
+    });
+    otherInput.addEventListener('input', () => institutionSelect.value = '__OTHER__');
+	
+    document.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem(triedKey) == 'yes') {
+        document.getElementById('form-container').classList.add('hidden');
+		if(localStorage.getItem('status') == 'Rejected'){
+		  Swal.fire({icon: 'error',title: 'Rejected',text: 'Your request was rejected already.', allowOutsideClick: false});
+		}else if(localStorage.getItem('status') == 'Approved'){
+		  Swal.fire({icon: 'info',title: 'Approved',text: 'Your request has already been approved!', allowOutsideClick: false});
+		}else{
+		  Swal.fire({icon: 'warning',title: 'Pending',text: 'Your request is pending review. Please check status if You want.'});
+          showStatusSection();
+		}
+      }
+    });
+
+    document.getElementById('create-btn').addEventListener('click', () => {
+  const data = {
+    action: 'createUser',
+    name: document.getElementById('name').value.trim(),
+    roll: document.getElementById('roll').value.trim(),
+    year: document.getElementById('year').value.trim(),
+    institution: institutionSelect.value === '__OTHER__'
+      ? otherInput.value.trim()
+      : institutionSelect.value
+  };
+
+  if (!data.name || !data.roll || !data.year || !data.institution) {
+    alert("All fields are required!");
+    return;
+  }
+
+  const btn = document.getElementById('create-btn');
+  btn.disabled = true;
+
+  // build a query string instead of a JSON POST
+  const qs = new URLSearchParams(data).toString();
+  fetch(`${API}?${qs}`, { method: 'GET' })
+    .then(r => r.json())
+    .then(resp => {
+      localStorage.setItem(triedKey, 'yes');
+      localStorage.setItem(userKey, resp.id);
+      document.getElementById('form-container').classList.add('hidden');
+    })
+    .catch(err => {
+      console.error(err);
+      //btn.disabled = false;
+    });
+});
+
+
+    document.getElementById('check-btn').addEventListener('click', () => {
+      const user = localStorage.getItem(userKey);
+      fetch(API + '?action=getStatus&id=' + user)
+        .then(r => r.json())
+        .then(data => {
+          document.getElementById('status-text').textContent = data.status;
+		  document.getElementById('yapis').style.display = 'block';
+          if (data.status == 'Approved') {
+            // Save subjects and allow login later
+		    localStorage.setItem('status', 'Approved');
+            localStorage.setItem('subjects', JSON.stringify(data.subjects));
+            // Optionally set device login flag here
+		    Swal.fire({icon: 'success',title: 'Approved',text: 'Your request has been Approved!', allowOutsideClick: false});
+          }else if(data.status == 'pending') {
+		    Swal.fire({icon: 'warning',title: 'Pending',text: 'Your request is still pending review.', allowOutsideClick: false});
+		  }else if(data.status == 'Rejected'){
+		    localStorage.setItem('status', 'rejected');
+		    Swal.fire({icon: 'error',title: 'Rejected',text: 'Your request has been rejected.', allowOutsideClick: false});
+		  }
+		  document.getElementById('check-btn').disabled = true;
+        });
+    });
+
+    function showStatusSection() {
+      document.getElementById('status-container').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

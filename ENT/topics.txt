@@ -1,0 +1,230 @@
+const topics = [
+    {
+        "id": 1,
+        "url": "Embryology_of_Ear_and_Malformations",
+        "name": "Embryology of Ear and Malformations",
+        "count": 15
+    },
+    {
+        "id": 2,
+        "url": "Anatomy_of_External_Ear",
+        "name": "Anatomy of External Ear",
+        "count": 22
+    },
+    {
+        "id": 3,
+        "url": "Anatomy_of_Middle_Ear",
+        "name": "Anatomy of Middle Ear",
+        "count": 27
+    },
+    {
+        "id": 4,
+        "url": "Anatomy_of_Mastoid",
+        "name": "Anatomy of Mastoid",
+        "count": 10
+    },
+    {
+        "id": 5,
+        "url": "Anatomy_of_Inner_Ear",
+        "name": "Anatomy of Inner Ear",
+        "count": 22
+    },
+    {
+        "id": 6,
+        "url": "Disorders_of_External_Ear",
+        "name": "Disorders of External Ear",
+        "count": 29
+    },
+    {
+        "id": 7,
+        "url": "Disorders_of_Middle_Ear",
+        "name": "Disorders of Middle Ear",
+        "count": 21
+    },
+    {
+        "id": 8,
+        "url": "Cholesteatoma_and_Types_of_CSOM",
+        "name": "Cholesteatoma and Types of CSOM",
+        "count": 18
+    },
+    {
+        "id": 9,
+        "url": "CSOM_-_Treatment_and_Complications",
+        "name": "CSOM - Treatment and Complications",
+        "count": 18
+    },
+    {
+        "id": 10,
+        "url": "Otosclerosis",
+        "name": "Otosclerosis",
+        "count": 24
+    },
+    {
+        "id": 11,
+        "url": "Meniere\u2019s_Disease",
+        "name": "Meniere\u2019s Disease",
+        "count": 21
+    },
+    {
+        "id": 12,
+        "url": "Tumors_of_Ear",
+        "name": "Tumors of Ear",
+        "count": 27
+    },
+    {
+        "id": 13,
+        "url": "Anatomy_of_Facial_Nerve",
+        "name": "Anatomy of Facial Nerve",
+        "count": 18
+    },
+    {
+        "id": 14,
+        "url": "Facial_Nerve_Disorders",
+        "name": "Facial Nerve Disorders",
+        "count": 23
+    },
+    {
+        "id": 15,
+        "url": "Eustachian_Tube",
+        "name": "Eustachian Tube",
+        "count": 15
+    },
+    {
+        "id": 16,
+        "url": "Physiology_of_hearing_and_Tuning_fork_tests",
+        "name": "Physiology of hearing and Tuning fork tests",
+        "count": 21
+    },
+    {
+        "id": 17,
+        "url": "Audiometric_tests_and_Special_tests_of_hearing",
+        "name": "Audiometric tests and Special tests of hearing",
+        "count": 19
+    },
+    {
+        "id": 18,
+        "url": "Anatomy_of_Nose",
+        "name": "Anatomy of Nose",
+        "count": 19
+    },
+    {
+        "id": 19,
+        "url": "Anatomy_of_Paranasal_Sinuses",
+        "name": "Anatomy of Paranasal Sinuses",
+        "count": 13
+    },
+    {
+        "id": 20,
+        "url": "Physiology_of_Nose_and_Paranasal_Sinuses",
+        "name": "Physiology of Nose and Paranasal Sinuses",
+        "count": 12
+    },
+    {
+        "id": 21,
+        "url": "Epistaxis",
+        "name": "Epistaxis",
+        "count": 15
+    },
+    {
+        "id": 22,
+        "url": "Congenital_Anomalies_of_Nose_and_Disease_of_Nose",
+        "name": "Congenital Anomalies of Nose and Disease of Nose",
+        "count": 18
+    },
+    {
+        "id": 23,
+        "url": "Rhinitis",
+        "name": "Rhinitis",
+        "count": 18
+    },
+    {
+        "id": 24,
+        "url": "Disorder_of_Nasal_Septum_and_Nasal_Polyposis",
+        "name": "Disorder of Nasal Septum and Nasal Polyposis",
+        "count": 19
+    },
+    {
+        "id": 25,
+        "url": "Trauma_of_Nose_and_Face",
+        "name": "Trauma of Nose and Face",
+        "count": 22
+    },
+    {
+        "id": 26,
+        "url": "Tumors_of_Nose_and_PNS",
+        "name": "Tumors of Nose and PNS",
+        "count": 18
+    },
+    {
+        "id": 27,
+        "url": "Sinusitis_and_its_Complication",
+        "name": "Sinusitis and its Complication",
+        "count": 31
+    },
+    {
+        "id": 28,
+        "url": "Anatomy_and_Physiology_of_Pharynx",
+        "name": "Anatomy and Physiology of Pharynx",
+        "count": 13
+    },
+    {
+        "id": 29,
+        "url": "Adenoids",
+        "name": "Adenoids",
+        "count": 11
+    },
+    {
+        "id": 30,
+        "url": "Tonsils",
+        "name": "Tonsils",
+        "count": 22
+    },
+    {
+        "id": 31,
+        "url": "Abscesses_of_Pharynx",
+        "name": "Abscesses of Pharynx",
+        "count": 20
+    },
+    {
+        "id": 32,
+        "url": "Nasopharyngeal_Angiofibroma",
+        "name": "Nasopharyngeal Angiofibroma",
+        "count": 12
+    },
+    {
+        "id": 33,
+        "url": "Nasopharyngeal_Carcinoma",
+        "name": "Nasopharyngeal Carcinoma",
+        "count": 13
+    },
+    {
+        "id": 34,
+        "url": "Anatomy_and_Physiology_of_Larynx",
+        "name": "Anatomy and Physiology of Larynx",
+        "count": 21
+    },
+    {
+        "id": 35,
+        "url": "Stridor_and_Congenital_Conditions_of_Larynx",
+        "name": "Stridor and Congenital Conditions of Larynx",
+        "count": 12
+    },
+    {
+        "id": 36,
+        "url": "Voice_and_Speech_Disorders",
+        "name": "Voice and Speech Disorders",
+        "count": 21
+    },
+    {
+        "id": 37,
+        "url": "Laryngeal_Carcinoma",
+        "name": "Laryngeal Carcinoma",
+        "count": 13
+    },
+    {
+        "id": 38,
+        "url": "Instruments",
+        "name": "Instruments",
+        "count": 10
+    }
+];
